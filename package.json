@@ -1,0 +1,49 @@
+{
+  "name": "htcpcp-tea",
+  "version": "0.0.1",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./lib": {
+      "default": "./dist/lib/index.js",
+      "types": "./dist/lib/index.d.ts"
+    },
+    "./lib/shared": "./dist/lib/shared.js",
+    "./lib/header": "./dist/lib/header.js",
+    "./lib/constants": "./dist/lib/constants.js",
+    ".": "./dist/index.js",
+    "./shared": "./dist/shared.js"
+  },
+  "scripts": {
+    "run:client": "tsx test/client.ts",
+    "run:server": "tsx test/server.ts",
+    "build": "tsc -p .",
+    "lint": "eslint src/**.ts test/**.ts",
+    "release": "pnpm build && pnpm changeset publish"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.5",
+    "dedent": "^1.5.3",
+    "uint8array-extras": "^1.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.5.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.14.5",
+    "eslint": "^9.5.0",
+    "htcpcp-tea": "file:./",
+    "tsx": "^4.15.6",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.13.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": "dont use npm"
+  },
+  "author": "Bernd Storath <bernd@kaaaxcreators.de>",
+  "license": "MIT",
+  "files": [
+    "src/**.ts",
+    "dist/**.ts"
+  ]
+}

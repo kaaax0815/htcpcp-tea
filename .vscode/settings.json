@@ -1,0 +1,10 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "editor.useTabStops": false,
+    "files.eol": "\n",
+    "editor.tabSize": 2,
+    "search.exclude": {
+      "pnpm-lock.yaml": true
+    },
+    "npm.packageManager": "pnpm"
+}
